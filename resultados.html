@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="img/icono.png" rel="icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Encuesta Colores Favoritos</title>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"> <i class="iconoP bi bi-spotify"></i> </a>
+              <h1 class="text-light m-3">Encuesta Preferencias de Color  </h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " id="menus">
+                 
+                  
+                </ul>
+                <form class="d-flex " role="search">
+                  <select id="idioma" onchange="cambiarIdioma(this.value)">
+                      <option value="es">Español</option>
+                      <option value="en">Ingles</option>
+                  </select>
+                  
+                  
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <script>
+              const xhr=new XMLHttpRequest();
+              xhr.open("GET", "menu.xml", true);
+              xhr.onload = function() {
+                  if (xhr.status === 200) {
+                      const xmlDoc = xhr.responseXML;
+                      const items = xmlDoc.getElementsByTagName("item");
+                      let menuHTML="";
+                      for (let i = 0; i < items.length; i++) {
+                          const nombre = items[i].getElementsByTagName("nombre")[0].textContent;
+                          const link = items[i].getElementsByTagName("link")[0].textContent;
+                          menuHTML+=`
+                              <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="${link}">${nombre}</a>
+                              </li>
+                              `;
+                      }
+                      document.getElementById("menus").innerHTML=menuHTML;
+                  }
+                  else {
+                      console.error("Error");
+                  }
+              };
+              xhr.send();
+        </script>
+
+    </header>
+    
+
+    <main>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/esta1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/esta2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/esta3.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      
+          
+
+
+          <div class="container my-5 indexx" >
+            <h2 id="titulo1">¿Por qué los colores influyen en nuestra mente y comportamiento?</h2>
+            <p id="parrafo1">El modo en el que los colores nos inducen a experimentar determinadas sensaciones y a adoptar ciertas actitudes tiene dos tipos de causas: las biológicas, por un lado, y las culturales, por el otro.
+
+                En lo que respecta en los aspectos biológicos de este fenómeno, la Psicología del color es una realidad más allá de la especie humana: en la naturaleza, la percepción de colores influye en la conducta de muchos animales. Por ejemplo, algunos reptiles del grupo de los eslizones ahuyentan a sus depredadores mostrando su lengua, de color azul oscuro, ya que el resto de especies lo ven como una señal de enfermedad. Por otro lado, las combinaciones con colores rojos y amarillos son vistas como una señal de peligro, y muchas especies las usan a modo de advertencia (e incluso hay otras totalmente inofensivas que adoptan tonalidades parecidas para intentar parecer intimidantes).
+                
+                En lo que respecta a los aspectos culturales, prácticamente todas las sociedades humanas asocian los colores a determinados conceptos para expresar ideas abstractas, algo normal si tenemos en cuenta que nos es difícil utilizar pigmentos para crear pinturas corporales, dibujos sobre todo tipo de soportes, etc. Y, por otro lado, el Homo sapiens es una especie muy visual, y con una gran capacidad para percibir muchos colores (la mayoría de mamíferos y reptiles perciben muchos menos).</p>
+              
+          </div>
+
+
+          <div class="container my-5 indexx" >
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/result1.png" class="img-fluid rounded-circle" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title" id="titulo2">Psicología del Color:</h2>
+                    <p class="card-text" id="parrafo2">Todos estamos influenciados por cosas de nuestra vida cotidiana: clima, ropa que usamos, programas de televisión, redes sociales, etc. Pero, ¿sabías que los colores de estas cosas pueden influir en tu estado de ánimo y emociones? La psicología del color es el estudio de cómo los diferentes tonos de color pueden afectar tu comportamiento o personalidad.
+
+                        Los científicos y psicólogos por años han estado estudiando la correlación entre el color y la mente humana, y los resultados son polarizantes. Algunos creen que la psicología del color es una pseudociencia utilizada para comercializar productos e influir en las personas, mientras que otros se mantienen firmes en que el color influye en la vida cotidiana de una persona.
+                        
+                        Sin importar lo que creas, no puedes negar que algunos colores se relacionan a determinadas emociones y características. Por ejemplo, el negro suele utilizarse en los funerales y simboliza el duelo, el dolor y la muerte. Por otro lado, el rojo puede relacionarse con la ardiente y llameante pasión del amor o la ira.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          
+          
+
+
+
+
+
+          <script>
+           
+            function cargarTraducciones(callback) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'resultados.json', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        callback(data);
+                    }
+                };
+                xhr.send();
+            }
+
+          
+            function cambiarIdioma(idioma) {
+                cargarTraducciones(function (traducciones) {
+                    document.getElementById('titulo1').textContent = traducciones[idioma].titulo1;
+                    document.getElementById('parrafo1').textContent = traducciones[idioma].parrafo1;
+
+                    document.getElementById('parrafo2').textContent = traducciones[idioma].parrafo2;
+                    document.getElementById('parrafo2').textContent = traducciones[idioma].parrafo2;
+                   
+                });
+            }
+        </script>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-top" >
+            <div class="row gy-4">
+              <div class="col-lg-5 col-md-12 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <span class="sitename">Encuesta Preferencias de Color</span>
+                </a>
+                <p>Pagina especializada en realizar encuestas a personas para saber estadisticamente cuales son los colores mas usados con frecuencia.</p>
+                <div class="social-links d-flex mt-4">
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+      
+              <div class="col-lg-2 col-6 footer-links">
+                <h4>Populares</h4>
+                <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="formularios.html">Formulario</a></li>
+                  <li><a href="resultados.html">Resultado</a></li>
+                  <li><a href="recomdaciones.html">Recomendaciones</a></li>
+                  <li><a href="comunidad.html">Comunidad</a></li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-2 col-6 footer-links">
+                <h4>Nuestros Servicios</h4>
+                <ul>
+                  <li><a href="formularios.html">Encuestas Color</a></li>
+                  <li><a href="#">Entrevistas</a></li>
+                  <li><a href="#">Estadisticas </a></li>
+                  <li><a href="#">Marketing</a></li>
+                  <li><a href="#">Pinturas</a></li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start footer-links">
+                <h4>Contactanos:</h4>
+                <p>Avenida Los Ilustres #100</p>
+                <p>Potosi, Villas Imperial</p>
+                <p>Bolivia</p>
+                <p class="mt-4"><strong>Celular:</strong> <span>+591 75733435</span></p>
+                <p><strong>Email:</strong> <span>santiagosafher@gmail.com</span></p>
+              </div>
+      
+            </div>
+          </div>
+      
+          <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="nombre-sitio">Encuestas Colores</strong> <span>Todos los Derechos Reservados</span></p>
+            <div class="credito">
+              
+              Elaborado por: Brayan Navarro
+            </div>
+          </div>
+        
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

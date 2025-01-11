@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="img/icono.png" rel="icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Encuesta Colores Favoritos</title>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"> <i class="iconoP bi bi-spotify"></i> </a>
+              <h1 class="text-light m-3">Encuesta Preferencias de Color  </h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " id="menus">
+                 
+                  
+                </ul>
+                <form class="d-flex " role="search">
+                  <select id="idioma" onchange="cambiarIdioma(this.value)">
+                      <option value="es">Español</option>
+                      <option value="en">Ingles</option>
+                  </select>
+                  
+                  
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <script>
+              const xhr=new XMLHttpRequest();
+              xhr.open("GET", "menu.xml", true);
+              xhr.onload = function() {
+                  if (xhr.status === 200) {
+                      const xmlDoc = xhr.responseXML;
+                      const items = xmlDoc.getElementsByTagName("item");
+                      let menuHTML="";
+                      for (let i = 0; i < items.length; i++) {
+                          const nombre = items[i].getElementsByTagName("nombre")[0].textContent;
+                          const link = items[i].getElementsByTagName("link")[0].textContent;
+                          menuHTML+=`
+                              <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="${link}">${nombre}</a>
+                              </li>
+                              `;
+                      }
+                      document.getElementById("menus").innerHTML=menuHTML;
+                  }
+                  else {
+                      console.error("Error");
+                  }
+              };
+              xhr.send();
+        </script>
+
+    </header>
+    
+
+    <main>
+      
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/hero1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/hero2.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/hero3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/hero4.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="container indexx my-5 " >
+            <h2 id="titulo1">Descripcion de la Encuesta:</h2>
+            <p id="parrafo1">El color es significativo en la percepción de las personas, ya que con base en ella se pueden tomar decisiones referentes a la aceptación de productos, alimentos, ambientes, emociones, entre múltiples factores. El objetivo de la pagina web es conocer la popularidad de los colores en la sociedad boliviana  con el fin de ser referente en múltiples aplicaciones cotidianas.  entre los sexos referentes a los colores: amarillo, negro, morado y rosado, el color más preferido fue el negro y el de menor aceptación por parte de los indagados fue el color café. Se concluye que el color rojo es asociado con la sangre, el amarillo con el astro sol, el azul con el cielo, el blanco con la paz, el negro con la elegancia y el verde con la naturaleza.</p>
+          </div>
+
+
+
+          <div class="container my-5 indexx" >
+            <h2 id="titulo2">Objetivo de Conocer las Preferencias de Color:</h2>
+            <p id="parrafo2">El significado de los colores se ha investigado en diferentes áreas del conocimiento como diseño, publicidad, educación, psicología, marketing, entre otras (Won & Westland, 2016). La psicología del color se relaciona con las diferentes tonalidades y su percepción, se ha convertido vital evaluarla en las personas porque permite comerciali­zar de manera exitosa productos y servicios (Suresh, 2017). En el área de la psicología ambiental, el color se asocia con el ambiente, el cual tiene un gran impacto en la percepción y el comportamiento humano (Savavibool et al., 2018). El color afecta directamente a nuestro subconsciente de manera que influye en la toma de decisiones (Hunjet & Vuk, 2017). El color se asocia con el brillo, la intensidad, la luminosidad y el ambiente, incidiendo en las emociones que repercuten en respuestas cerebrales propias de cada individuo (Shin et al., 2015). Es un componente significa­tivo vinculado a nuestras vidas, pero también se relaciona con recuerdos del pasado (Popa et al., 2010).</p>
+              
+          </div>
+
+
+          <div class="container my-5 indexx" >
+            <div class="card mb-3" >
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/inicio1.jpg" class="img-fluid rounded-circle" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h2 class="card-title" id="titulo3">Importancia del Color en la Vida Cotidiana:</h2>
+                    <p class="card-text" id="parrafo3">El color es un componente fundamental de nuestra vida, y es una de las cosas que más nos afecta en la percepción y la toma de decisiones (Suresh, 2017). El color afecta directamente a nuestro subconsciente de manera que influye en la toma de decisiones, como el color de la luz, la temperatura de color y el sol. <br>
+                      El color está presente en nuestras vidas, todos los días y en todo momento, en cualquier dirección que miremos. Además de ser fundamental en el día a día, juega un papel muy importante en lo que respecta al diseño. <br>
+                      Los colores son capaces de hacernos sentir de diferentes maneras, expresar emociones o estados de ánimo, alertarnos de peligros, transmitir información sobre ciertos objetos e incluso hacernos tomar decisiones en nuestra vida diaria, por lo que en diseño, es fundamental entender la teoría de los colores para que podamos llamar la atención de los usuarios sobre un detalle en particular,  Asignar diferentes significados a las cosas y transmitir mensajes de manera más efectiva, combinando y utilizando colores de una manera más consciente y armoniosa.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="container my-5 indexx text-center" >
+            <h2 id="questions">Preguntas Frecuentes</h2>
+            <div class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">
+              <h5 id="question1">¿Cuantas Personas Prefieren Unicamente el color Rojo?</h5>
+              <p id="ask1">Respuesta.- 25 Personas</p>
+            </div>
+            <div class="p-3 mb-2 bg-secondary text-white" >
+              <h5 id="question2">¿Cuantas Personas Prefieren Unicamente el color Blanco?</h5>
+              <p id="ask2">Respuesta.- 30 Personas</p>
+            </div>
+            <div class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+              <h5 id="question3">¿Cuantas Personas Prefieren Unicamente el color Negro?</h5>
+              <p id="ask3">Respuesta.- 15 Personas</p>
+            </div>
+            <div class="p-3 mb-2 bg-primary-subtle text-primary-emphasis">
+              <h5 id="question4">¿Cuantas Personas Prefieren Unicamente el color Azul?</h5>
+              <p id="ask4">Respuesta.- 20 Personas</p>
+            </div>
+            <div class="p-3 mb-2 bg-success-subtle text-success-emphasis">
+              <h5 id="question5">¿Cuantas Personas Prefieren Unicamente el color Verde?</h5>
+              <p id="ask5">Respuesta.- 18 Personas</p>
+            </div>
+            <div class="p-3 mb-2 bg-warning-subtle text-warning-emphasis">
+              <h5 id="question6">¿Cuantas Personas Prefieren Unicamente el color Amarillo?</h5>
+              <p id="ask6">Respuesta.- 18 Personas</p>
+            </div>
+          </div>
+          
+
+
+
+
+
+          <script>
+            
+            function cargarTraducciones(callback) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'translateMain.json', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        callback(data);
+                    }
+                };
+                xhr.send();
+            }
+
+            
+            function cambiarIdioma(idioma) {
+                cargarTraducciones(function (traducciones) {
+                    document.getElementById('titulo1').textContent = traducciones[idioma].titulo1;
+                    document.getElementById('parrafo1').textContent = traducciones[idioma].parrafo1;
+                    document.getElementById('titulo2').textContent = traducciones[idioma].titulo2;
+                    document.getElementById('parrafo2').textContent = traducciones[idioma].parrafo2;
+                    document.getElementById('titulo3').textContent = traducciones[idioma].titulo3;
+                    document.getElementById('parrafo3').textContent = traducciones[idioma].parrafo3;
+
+                    document.getElementById('questions').textContent = traducciones[idioma].questions;
+                    document.getElementById('question1').textContent = traducciones[idioma].question1;
+                    document.getElementById('question2').textContent = traducciones[idioma].question2;
+                    document.getElementById('question3').textContent = traducciones[idioma].question3;
+                    document.getElementById('question4').textContent = traducciones[idioma].question4;
+                    document.getElementById('question5').textContent = traducciones[idioma].question5;
+                    document.getElementById('question6').textContent = traducciones[idioma].question6;
+                    document.getElementById('ask1').textContent = traducciones[idioma].ask1;
+                    document.getElementById('ask2').textContent = traducciones[idioma].ask2;
+                    document.getElementById('ask3').textContent = traducciones[idioma].ask3;
+                    document.getElementById('ask4').textContent = traducciones[idioma].ask4;
+                    document.getElementById('ask5').textContent = traducciones[idioma].ask5;
+                    document.getElementById('ask6').textContent = traducciones[idioma].ask6;
+                });
+            }
+        </script>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-top" >
+            <div class="row gy-4">
+              <div class="col-lg-5 col-md-12 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <span class="sitename">Encuesta Preferencias de Color</span>
+                </a>
+                <p>Pagina especializada en realizar encuestas a personas para saber estadisticamente cuales son los colores mas usados con frecuencia.</p>
+                <div class="social-links d-flex mt-4">
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+      
+              <div class="col-lg-2 col-6 footer-links">
+                <h4>Populares</h4>
+                <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="formularios.html">Formulario</a></li>
+                  <li><a href="resultados.html">Resultado</a></li>
+                  <li><a href="recomdaciones.html">Recomendaciones</a></li>
+                  <li><a href="comunidad.html">Comunidad</a></li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-2 col-6 footer-links">
+                <h4>Nuestros Servicios</h4>
+                <ul>
+                  <li><a href="formularios.html">Encuestas Color</a></li>
+                  <li><a href="#">Entrevistas</a></li>
+                  <li><a href="#">Estadisticas </a></li>
+                  <li><a href="#">Marketing</a></li>
+                  <li><a href="#">Pinturas</a></li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start footer-links">
+                <h4>Contactanos:</h4>
+                <p>Avenida Los Ilustres #100</p>
+                <p>Potosi, Villas Imperial</p>
+                <p>Bolivia</p>
+                <p class="mt-4"><strong>Celular:</strong> <span>+591 75733435</span></p>
+                <p><strong>Email:</strong> <span>santiagosafher@gmail.com</span></p>
+              </div>
+      
+            </div>
+          </div>
+      
+          <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="nombre-sitio">Encuestas Colores</strong> <span>Todos los Derechos Reservados</span></p>
+            <div class="credito">
+              
+              Elaborado por: Brayan Navarro
+            </div>
+          </div>
+        
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+.container-fluid .iconoP{
+    font-size: 50px;
+}
+
+.footer{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    
+    /* font-size: 14px;
+    padding-bottom: 50px;
+    position: relative; */
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid;
+    font-size: 16px;
+    color: rgb(223, 223, 223);
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+  .footer .social-links a:hover {
+    color: #0ac472;
+    border-color: #0ac472;
+  }
+
+  .footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .footer .footer-about a{
+    
+    text-decoration: none;
+    
+  }
+
+  .footer .footer-about .sitename{
+    
+    color: #0ac472;
+    font-size: 24px;
+    
+  }
+
+  .footer .footer-links ul a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .footer .footer-links ul a:hover {
+    color: #0ac472;
+}
+
+.carousel-item img { 
+    width: 1280px;
+    height: 720px; 
+    /* height: auto;  */
+}
+.container-fluid h1{
+  color: white;
+}
+
+.nav-item a{
+  font-size: 22px;
+}
+
+
+
+
+.indexx h2{
+  
+  color: #0ac472;
+}
+
+.footer .footer-links h4{
+  
+  color: #0ac472;
+}

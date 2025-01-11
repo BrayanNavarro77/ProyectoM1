@@ -1,0 +1,69 @@
+{
+    "es": {
+
+      "titulo1": "Descripcion de la Encuesta:",
+      "parrafo1": "El color es significativo en la percepción de las personas, ya que con base en ella se pueden tomar decisiones referentes a la aceptación de productos, alimentos, ambientes, emociones, entre múltiples factores. El objetivo de la pagina web es conocer la popularidad de los colores en la sociedad boliviana  con el fin de ser referente en múltiples aplicaciones cotidianas.  entre los sexos referentes a los colores: amarillo, negro, morado y rosado, el color más preferido fue el negro y el de menor aceptación por parte de los indagados fue el color café. Se concluye que el color rojo es asociado con la sangre, el amarillo con el astro sol, el azul con el cielo, el blanco con la paz, el negro con la elegancia y el verde con la naturaleza.",
+
+      "titulo2": "Objetivo de Conocer las Preferencias de Color:",
+      "parrafo2": "El significado de los colores se ha investigado en diferentes áreas del conocimiento como diseño, publicidad, educación, psicología, marketing, entre otras (Won & Westland, 2016). La psicología del color se relaciona con las diferentes tonalidades y su percepción, se ha convertido vital evaluarla en las personas porque permite comerciali­zar de manera exitosa productos y servicios (Suresh, 2017). En el área de la psicología ambiental, el color se asocia con el ambiente, el cual tiene un gran impacto en la percepción y el comportamiento humano (Savavibool et al., 2018). El color afecta directamente a nuestro subconsciente de manera que influye en la toma de decisiones (Hunjet & Vuk, 2017). El color se asocia con el brillo, la intensidad, la luminosidad y el ambiente, incidiendo en las emociones que repercuten en respuestas cerebrales propias de cada individuo (Shin et al., 2015). Es un componente significa­tivo vinculado a nuestras vidas, pero también se relaciona con recuerdos del pasado (Popa et al., 2010).",
+
+      "titulo3": "Importancia del Color en la Vida Cotidiana:",
+      "parrafo3":"El color es un componente fundamental de nuestra vida, y es una de las cosas que más nos afecta en la percepción y la toma de decisiones (Suresh, 2017). El color afecta directamente a nuestro subconsciente de manera que influye en la toma de decisiones, como el color de la luz, la temperatura de color y el sol. \n El color está presente en nuestras vidas, todos los días y en todo momento, en cualquier dirección que miremos. Además de ser fundamental en el día a día, juega un papel muy importante en lo que respecta al diseño. \nLos colores son capaces de hacernos sentir de diferentes maneras, expresar emociones o estados de ánimo, alertarnos de peligros, transmitir información sobre ciertos objetos e incluso hacernos tomar decisiones en nuestra vida diaria, por lo que en diseño, es fundamental entender la teoría de los colores para que podamos llamar la atención de los usuarios sobre un detalle en particular,  Asignar diferentes significados a las cosas y transmitir mensajes de manera más efectiva, combinando y utilizando colores de una manera más consciente y armoniosa.",
+
+
+      "questions": "Preguntas Frecuentes",
+      "question1": "¿Cuantas Personas Prefieren Unicamente el color Rojo?",
+      "question2": "¿Cuantas Personas Prefieren Unicamente el color Blanco?",
+      "question3": "¿Cuantas Personas Prefieren Unicamente el color Negro?",
+      "question4": "¿Cuantas Personas Prefieren Unicamente el color Azul?",
+      "question5": "¿Cuantas Personas Prefieren Unicamente el color Verde?",
+      "question6":"¿Cuantas Personas Prefieren Unicamente el color Amarillo?",
+
+      "ask1":"25 Personas",
+      "ask2":"30 Personas",
+      "ask3":"15 Personas",
+      "ask4":"20 Personas",
+      "ask5":"18 Personas",
+      "ask6":"28 Personas"
+
+
+    },
+
+
+
+    "en": {
+
+      "titulo1": "Survey Description", 
+      "parrafo1": "Color is significant in people's perception, since based on it, decisions can be made regarding the acceptance of products, foods, environments, emotions, among multiple factors. The objective of the website is to know the popularity of colors in Bolivian society in order to be a reference in multiple everyday applications.  Among the sexes regarding colors: yellow, black, purple and pink, the most preferred color was black and the one with the least acceptance by those surveyed was the color brown. It is concluded that the color red is associated with blood, yellow with the sun, blue with the sky, white with peace, black with elegance and green with nature.",
+
+      "titulo2": "Objective of Knowing Color Preferences:",
+      "parrafo2":"The meaning of colors has been investigated in different areas of knowledge such as design, advertising, education, psychology, marketing, among others (Won & Westland, 2016). The psychology of color is related to different shades and their perception; it has become vital to evaluate it in people because it allows them to successfully market products and services (Suresh, 2017). In the area of ​​environmental psychology, color is associated with the environment, which has a great impact on human perception and behavior (Savavibool et al., 2018). Color directly affects our subconscious in a way that influences decision making (Hunjet & Vuk, 2017). Color is associated with brightness, intensity, luminosity and environment, influencing emotions that impact brain responses specific to each individual (Shin et al., 2015). It is a significant component linked to our lives, but it is also related to memories of the past (Popa et al., 2010).",
+
+      "titulo3": "Importance of Color in Everyday Life:",
+      "parrafo3":"Color is a fundamental component of our life, and it is one of the things that most affects our perception and decision making (Suresh, 2017). Color directly affects our subconscious in ways that influence decision making, such as the color of light, color temperature and the sun. \n Color is present in our lives, every day and at all times, in any direction we look. In addition to being fundamental in everyday life, it plays a very important role when it comes to design. \nColors are capable of making us feel different ways, expressing emotions or moods, alerting us to dangers, transmitting information about certain objects and even making us make decisions in our daily lives, so in design, it is essential to understand the theory of colors so that we can draw the attention of users to a particular detail, Assign different meanings to things and transmit messages more effectively, combining and using colors in a more conscious and harmonious way.",
+
+
+      "questions": "Frequently asked questions",
+      "question1": "How Many People Only Prefer the color Red?",
+      "question2": "How Many People Only Prefer the color White?",
+      "question3": "How Many People Only Prefer the color Black?",
+      "question4": "How Many People Only Prefer the color Blue?",
+      "question5": "How Many People Only Prefer the color Green?",
+      "question6":"How Many People Only Prefer the color Yellow?",
+      
+
+      "ask1":"25 People",
+      "ask2":"30 People",
+      "ask3":"15 People",
+      "ask4":"20 People",
+      "ask5":"18 People",
+      "ask6":"28 People"
+      
+
+
+
+      
+    }
+    
+  }
+  

@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Juan Pérez",
+        "edad": 30,
+        "ciudad": "La Paz",
+        "colorFavorito": "Azul",
+        "motivo": "Porque es relajante"
+    },
+    {
+        "nombre": "María López",
+        "edad": 25,
+        "ciudad": "Santa Cruz",
+        "colorFavorito": "Rojo",
+        "motivo": "Porque es vibrante"
+    },
+    {
+        "nombre": "Carlos Gómez",
+        "edad": 35,
+        "ciudad": "Cochabamba",
+        "colorFavorito": "Verde",
+        "motivo": "Porque es natural"
+    },
+    {
+        "nombre": "Ana Torres",
+        "edad": 28,
+        "ciudad": "Oruro",
+        "colorFavorito": "Amarillo",
+        "motivo": "Porque es alegre"
+    },
+    {
+        "nombre": "Luis Morales",
+        "edad": 40,
+        "ciudad": "Potosí",
+        "colorFavorito": "Negro",
+        "motivo": "Porque es elegante"
+    },
+    {
+        "nombre": "Elena Suárez",
+        "edad": 32,
+        "ciudad": "Tarija",
+        "colorFavorito": "Blanco",
+        "motivo": "Porque es puro"
+    }
+]
